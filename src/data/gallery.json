@@ -1,0 +1,56 @@
+[
+  {
+    "id": "altar",
+    "src": "https://placehold.co/600x400/7f3210/ffffff?text=Altar",
+    "fullSrc": "https://placehold.co/1200x800/7f3210/ffffff?text=Altar",
+    "alt": "Placeholder image of an ofrenda altar with marigolds and candles",
+    "title": "Ofrenda",
+    "description": "A family altar decorated with marigolds, candles, and offerings to welcome returning souls.",
+    "category": "altar"
+  },
+  {
+    "id": "cempasuchil",
+    "src": "https://placehold.co/600x400/ff7f11/ffffff?text=Cempasúchil",
+    "fullSrc": "https://placehold.co/1200x800/ff7f11/ffffff?text=Cempasúchil",
+    "alt": "Placeholder image of bright cempasúchil marigold flowers",
+    "title": "Cempasúchil",
+    "description": "The vibrant marigold flower whose petals guide spirits home with color and scent.",
+    "category": "flowers"
+  },
+  {
+    "id": "calavera",
+    "src": "https://placehold.co/600x400/6d28d9/ffffff?text=Calavera",
+    "fullSrc": "https://placehold.co/1200x800/6d28d9/ffffff?text=Calavera",
+    "alt": "Placeholder image of a decorated sugar skull",
+    "title": "Calavera",
+    "description": "A decorated sugar skull that celebrates life with humor and sweetness.",
+    "category": "skulls"
+  },
+  {
+    "id": "papel-picado",
+    "src": "https://placehold.co/600x400/943f0c/ffffff?text=Papel+Picado",
+    "fullSrc": "https://placehold.co/1200x800/943f0c/ffffff?text=Papel+Picado",
+    "alt": "Placeholder image of colorful papel picado banners",
+    "title": "Papel picado",
+    "description": "Delicate cut-paper banners that dance in the wind and bring color to the celebration.",
+    "category": "decorations"
+  },
+  {
+    "id": "pan-de-muerto",
+    "src": "https://placehold.co/600x400/ffd24a/7f3210?text=Pan+de+Muerto",
+    "fullSrc": "https://placehold.co/1200x800/ffd24a/7f3210?text=Pan+de+Muerto",
+    "alt": "Placeholder image of pan de muerto bread",
+    "title": "Pan de muerto",
+    "description": "Traditional bread of the dead shared with family and placed on the ofrenda.",
+    "category": "food"
+  },
+  {
+    "id": "velas",
+    "src": "https://placehold.co/600x400/2e1065/ffffff?text=Velas",
+    "fullSrc": "https://placehold.co/1200x800/2e1065/ffffff?text=Velas",
+    "alt": "Placeholder image of lit candles on an altar",
+    "title": "Velas",
+    "description": "Candles that light the way for ancestors and fill the night with warmth.",
+    "category": "altar"
+  }
+]

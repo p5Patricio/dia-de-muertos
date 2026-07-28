@@ -86,5 +86,15 @@
     "description": "Seasonal flavors: pan de muerto, tamales, and more.",
     "ingredients": "Ingredients",
     "preparation": "Preparation"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "description": "Images inspired by tradition, color, and memory.",
+    "lightbox": {
+      "title": "Image viewer",
+      "previous": "Previous image",
+      "next": "Next image",
+      "counter": "{current} of {total}"
+    }
   }
 }

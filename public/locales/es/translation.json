@@ -86,5 +86,15 @@
     "description": "Sabores de la temporada: pan de muerto, tamales y más.",
     "ingredients": "Ingredientes",
     "preparation": "Preparación"
+  },
+  "gallery": {
+    "title": "Galería",
+    "description": "Imágenes inspiradas en la tradición, el color y la memoria.",
+    "lightbox": {
+      "title": "Visor de imágenes",
+      "previous": "Imagen anterior",
+      "next": "Imagen siguiente",
+      "counter": "{current} de {total}"
+    }
   }
 }
