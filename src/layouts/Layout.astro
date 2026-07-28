@@ -48,6 +48,9 @@ const ogImageUrl = new URL(Astro.props.ogImage ?? '/og-image.png', origin).toStr
     <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
     <HeadHrefLangs />
     <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
     <script is:inline>
       (function () {
         function getTheme() {

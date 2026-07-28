@@ -122,7 +122,7 @@ export default function Hero({ locale, translations, ctaHref }: HeroProps) {
       <a
         href="#intro"
         aria-label={scrollLabel}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce rounded-full p-2 text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        className="absolute bottom-8 left-1/2 z-10 flex h-10 w-10 -translate-x-1/2 animate-bounce items-center justify-center rounded-full text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         <ArrowDown className="h-6 w-6" />
       </a>

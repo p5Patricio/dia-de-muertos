@@ -4,7 +4,7 @@ import Layout from '@layouts/Layout.astro';
 import Hero from '@components/sections/Hero.tsx';
 import SectionPreview from '@components/sections/SectionPreview.astro';
 import { defaultLocale, isLocale, loadTranslations, type Locale } from '@lib/i18n';
-import { localizePath } from '@lib/i18n-shared';
+import { localizePath, t } from '@lib/i18n-shared';
 
 export function getStaticPaths() {
   return [
@@ -20,9 +20,11 @@ changeLanguage(locale);
 const translations = await loadTranslations(locale);
 
 const ctaHref = localizePath('/historia', locale);
+const title = t(translations, 'nav.home', 'Home');
+const description = t(translations, 'home.subtitle', 'A celebration of life, memory, and color.');
 ---
 
-<Layout locale={locale}>
+<Layout locale={locale} title={title} description={description}>
   <Hero locale={locale} translations={translations} ctaHref={ctaHref} />
   <SectionPreview locale={locale} translations={translations} />
 </Layout>

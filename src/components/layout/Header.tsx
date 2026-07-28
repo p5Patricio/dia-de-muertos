@@ -60,7 +60,7 @@ export default function Header({ locale, translations }: HeaderProps) {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <a
           href={localizedHref('/', locale)}
-          className="font-display text-xl tracking-wide text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          className="inline-flex h-10 items-center font-display text-xl tracking-wide text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           {t(translations, 'site.title', 'Día de Muertos')}
         </a>
@@ -71,7 +71,7 @@ export default function Header({ locale, translations }: HeaderProps) {
               <li key={item.key}>
                 <a
                   href={localizedHref(item.href, locale)}
-                  className="text-sm font-medium text-foreground/80 transition-colors hover:text-foreground focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="inline-flex h-10 items-center text-sm font-medium text-foreground/80 transition-colors hover:text-foreground focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                 >
                   {t(translations, item.key, item.key)}
                 </a>

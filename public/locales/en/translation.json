@@ -25,7 +25,8 @@
     "skipToContent": "Skip to main content",
     "mainNavigation": "Main navigation",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "scrollToContent": "Scroll to content"
   },
   "footer": {
     "copyright": "© {year} Día de Muertos. All rights reserved.",
@@ -95,7 +96,8 @@
       "previous": "Previous image",
       "next": "Next image",
       "counter": "{current} of {total}"
-    }
+    },
+    "openImage": "Open image {title}"
   },
   "music": {
     "title": "Music",

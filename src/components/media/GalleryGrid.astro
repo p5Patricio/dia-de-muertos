@@ -1,7 +1,7 @@
 ---
 import Lightbox from './Lightbox.tsx';
 import type { GalleryItem } from '@/types/media';
-import type { TranslationDict } from '@lib/i18n-shared';
+import { t, type TranslationDict } from '@lib/i18n-shared';
 
 interface Props {
   items: GalleryItem[];
@@ -13,14 +13,16 @@ const { items, translations } = Astro.props;
 ---
 
 <section id="gallery" class="container mx-auto px-4 py-16 md:py-24">
-  <div id="gallery-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" role="list">
+  <ul id="gallery-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {
       items.map((item, index) => (
-        <button
-          type="button"
-          data-gallery-index={index}
-          class="group relative overflow-hidden rounded-xl border border-border/60 bg-card text-left transition-all hover:border-cempasuchil-500/50 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-        >
+        <li>
+          <button
+            type="button"
+            data-gallery-index={index}
+            aria-label={t(translations, 'gallery.openImage', 'Open image {title}').replace('{title}', item.title)}
+            class="group relative block w-full overflow-hidden rounded-xl border border-border/60 bg-card text-left transition-all hover:border-cempasuchil-500/50 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+          >
           <img
             src={item.src}
             alt={item.alt}
@@ -33,8 +35,9 @@ const { items, translations } = Astro.props;
             <p class="text-xs uppercase tracking-wide text-white/80">{item.category}</p>
           </div>
         </button>
+      </li>
       ))
     }
-  </div>
+  </ul>
   <Lightbox client:visible items={items} translations={translations} />
 </section>

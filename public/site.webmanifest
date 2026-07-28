@@ -1,0 +1,17 @@
+{
+  "name": "Día de Muertos",
+  "short_name": "Día de Muertos",
+  "description": "A bilingual website celebrating the Mexican tradition of Día de Muertos.",
+  "start_url": "/es/",
+  "display": "standalone",
+  "background_color": "#fff8ed",
+  "theme_color": "#7f3210",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

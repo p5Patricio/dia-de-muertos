@@ -58,7 +58,7 @@ export default function Footer({ locale, translations }: FooterProps) {
                 <li key={item.key}>
                   <a
                     href={localizedHref(item.href, locale)}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    className="inline-flex min-h-[44px] items-center text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   >
                     {t(translations, item.key, item.key)}
                   </a>
@@ -77,7 +77,7 @@ export default function Footer({ locale, translations }: FooterProps) {
                   <a
                     href={localizedHref('/', targetLocale)}
                     aria-current={locale === targetLocale ? 'true' : undefined}
-                    className={`text-sm transition-colors focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
+                    className={`inline-flex min-h-[44px] items-center text-sm transition-colors focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ${
                       locale === targetLocale
                         ? 'font-medium text-foreground'
                         : 'text-muted-foreground hover:text-foreground'
