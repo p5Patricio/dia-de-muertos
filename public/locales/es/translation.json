@@ -34,6 +34,43 @@
   },
   "home": {
     "title": "Día de Muertos",
-    "subtitle": "Una celebración de vida, memoria y color."
+    "subtitle": "Una celebración de vida, memoria y color.",
+    "hero": {
+      "overline": "México",
+      "title": "Día de Muertos",
+      "subtitle": "Honra la memoria, celebra la vida y descubre los colores de una tradición que sigue viva.",
+      "cta": "Descubre la historia"
+    },
+    "intro": {
+      "title": "Una tradición que une mundos",
+      "text": "El Día de Muertos es una celebración mexicana donde las familias recuerdan a sus seres queridos con ofrendas, flores, música y color. Cada elemento cuenta una historia de amor, fe y conexión."
+    },
+    "sections": {
+      "title": "Explora la celebración",
+      "history": {
+        "title": "Historia",
+        "description": "Orígenes, evolución y significado de esta ancestral festividad."
+      },
+      "elements": {
+        "title": "Elementos",
+        "description": "Conoce el altar, la ofrenda, las calaveras y el cempasúchil."
+      },
+      "gallery": {
+        "title": "Galería",
+        "description": "Imágenes inspiradas en la tradición, el color y la memoria."
+      },
+      "music": {
+        "title": "Música",
+        "description": "Canciones y sonidos que acompañan la celebración."
+      },
+      "videos": {
+        "title": "Videos",
+        "description": "Documentales y clips que dan vida a la tradición."
+      },
+      "recipes": {
+        "title": "Recetas",
+        "description": "Sabores de la temporada: pan de muerto, tamales y más."
+      }
+    }
   }
 }

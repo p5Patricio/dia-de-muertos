@@ -1,0 +1,28 @@
+---
+import { changeLanguage } from 'i18next';
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/sections/Hero.tsx';
+import SectionPreview from '@components/sections/SectionPreview.astro';
+import { defaultLocale, isLocale, loadTranslations, type Locale } from '@lib/i18n';
+import { localizePath } from '@lib/i18n-shared';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const locale: Locale = isLocale(lang) ? lang : defaultLocale;
+
+changeLanguage(locale);
+const translations = await loadTranslations(locale);
+
+const ctaHref = localizePath('/historia', locale);
+---
+
+<Layout locale={locale}>
+  <Hero locale={locale} translations={translations} ctaHref={ctaHref} />
+  <SectionPreview locale={locale} translations={translations} />
+</Layout>

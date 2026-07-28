@@ -1,18 +1,3 @@
 ---
-import { t, changeLanguage } from "i18next";
-import Layout from "@layouts/Layout.astro";
-
-changeLanguage("es");
-
-const title = t("home.title", "D\u00EDa de Muertos");
-const subtitle = t("home.subtitle", "A celebration of life, memory, and color.");
+return Astro.redirect('/es/', 302);
 ---
-
-<Layout title={title}>
-  <section class="flex min-h-[60vh] items-center justify-center px-4 py-20">
-    <div class="text-center">
-      <h1 class="font-display text-4xl text-cempasuchil-500 md:text-6xl">{title}</h1>
-      <p class="mt-4 text-lg text-muted-foreground md:text-xl">{subtitle}</p>
-    </div>
-  </section>
-</Layout>

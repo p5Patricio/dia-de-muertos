@@ -34,6 +34,43 @@
   },
   "home": {
     "title": "Día de Muertos",
-    "subtitle": "A celebration of life, memory, and color."
+    "subtitle": "A celebration of life, memory, and color.",
+    "hero": {
+      "overline": "Mexico",
+      "title": "Día de Muertos",
+      "subtitle": "Honor memory, celebrate life, and discover the colors of a tradition that remains alive.",
+      "cta": "Discover the history"
+    },
+    "intro": {
+      "title": "A tradition that unites worlds",
+      "text": "Día de Muertos is a Mexican celebration where families remember their loved ones with offerings, flowers, music, and color. Every element tells a story of love, faith, and connection."
+    },
+    "sections": {
+      "title": "Explore the celebration",
+      "history": {
+        "title": "History",
+        "description": "Origins, evolution, and meaning of this ancient festivity."
+      },
+      "elements": {
+        "title": "Elements",
+        "description": "Learn about the altar, the offering, sugar skulls, and cempasúchil."
+      },
+      "gallery": {
+        "title": "Gallery",
+        "description": "Images inspired by tradition, color, and memory."
+      },
+      "music": {
+        "title": "Music",
+        "description": "Songs and sounds that accompany the celebration."
+      },
+      "videos": {
+        "title": "Videos",
+        "description": "Documentaries and clips that bring the tradition to life."
+      },
+      "recipes": {
+        "title": "Recipes",
+        "description": "Seasonal flavors: pan de muerto, tamales, and more."
+      }
+    }
   }
 }
