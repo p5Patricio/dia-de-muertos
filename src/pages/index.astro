@@ -1,23 +1,18 @@
 ---
-import '@styles/global.css';
+import { t, changeLanguage } from "i18next";
+import Layout from "@layouts/Layout.astro";
+
+changeLanguage("es");
+
+const title = t("home.title", "D\u00EDa de Muertos");
+const subtitle = t("home.subtitle", "A celebration of life, memory, and color.");
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Día de Muertos — Scaffold</title>
-  </head>
-  <body class="bg-background text-foreground">
-    <main class="flex min-h-screen items-center justify-center">
-      <div class="text-center">
-        <h1 class="font-display text-4xl text-cempasuchil-500">Día de Muertos</h1>
-        <p class="mt-4 text-muted-foreground">Scaffold ready for slice 2.</p>
-        <div class="mt-6">
-          <button class="rounded bg-primary px-4 py-2 text-primary-foreground">Primary</button>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title={title}>
+  <section class="flex min-h-[60vh] items-center justify-center px-4 py-20">
+    <div class="text-center">
+      <h1 class="font-display text-4xl text-cempasuchil-500 md:text-6xl">{title}</h1>
+      <p class="mt-4 text-lg text-muted-foreground md:text-xl">{subtitle}</p>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,39 @@
+{
+  "site": {
+    "title": "Día de Muertos",
+    "description": "Celebrate Día de Muertos with history, tradition, music, recipes, and a gallery inspired by this Mexican festivity."
+  },
+  "nav": {
+    "home": "Home",
+    "history": "History",
+    "elements": "Elements",
+    "gallery": "Gallery",
+    "music": "Music",
+    "videos": "Videos",
+    "recipes": "Recipes"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode"
+  },
+  "language": {
+    "switch": "Switch language",
+    "select": "Select language"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content",
+    "mainNavigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "copyright": "© {year} Día de Muertos. All rights reserved.",
+    "credits": "Made with respect and love for the tradition.",
+    "sitemap": "Sitemap"
+  },
+  "home": {
+    "title": "Día de Muertos",
+    "subtitle": "A celebration of life, memory, and color."
+  }
+}
