@@ -96,5 +96,28 @@
       "next": "Next image",
       "counter": "{current} of {total}"
     }
+  },
+  "music": {
+    "title": "Music",
+    "description": "Traditional songs and sounds that accompany the celebration."
+  },
+  "audio": {
+    "playerLabel": "Audio player",
+    "nowPlaying": "Now playing",
+    "play": "Play",
+    "pause": "Pause",
+    "previous": "Previous track",
+    "next": "Next track",
+    "seek": "Seek",
+    "volume": "Volume",
+    "mute": "Mute",
+    "captions": "Captions unavailable",
+    "playlist": "Playlist"
+  },
+  "videos": {
+    "title": "Videos",
+    "description": "Documentaries and clips that bring the tradition to life.",
+    "gridLabel": "Video grid",
+    "play": "Play video {title}"
   }
 }

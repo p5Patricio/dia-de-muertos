@@ -18,6 +18,7 @@ export interface Track {
 export interface Video {
   id: string;
   title: string;
+  description: string;
   category: string;
   embedUrl: string;
 }

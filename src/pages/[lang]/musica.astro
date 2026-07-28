@@ -1,0 +1,35 @@
+---
+import { changeLanguage } from 'i18next';
+import Layout from '@layouts/Layout.astro';
+import AudioPlayer from '@components/media/AudioPlayer.tsx';
+import tracks from '@data/tracks.json';
+import { defaultLocale, isLocale, loadTranslations, type Locale } from '@lib/i18n';
+import { t } from '@lib/i18n-shared';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const locale: Locale = isLocale(lang) ? lang : defaultLocale;
+changeLanguage(locale);
+const translations = await loadTranslations(locale);
+
+const title = t(translations, 'music.title', 'Música');
+const description = t(translations, 'music.description', '');
+---
+
+<Layout locale={locale} title={title} description={description}>
+  <article class="container mx-auto px-4 py-16 md:py-24">
+    <header class="mx-auto max-w-3xl text-center">
+      <h1 class="font-display text-4xl text-foreground md:text-5xl">{title}</h1>
+      <p class="mt-4 text-lg text-muted-foreground">{description}</p>
+    </header>
+  </article>
+  <section class="container mx-auto px-4 pb-16 md:pb-24">
+    <AudioPlayer client:load tracks={tracks} translations={translations} />
+  </section>
+</Layout>

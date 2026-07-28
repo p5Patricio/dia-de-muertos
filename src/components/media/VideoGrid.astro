@@ -1,0 +1,55 @@
+---
+import type { Video } from '@/types/media';
+import { t, type TranslationDict } from '@lib/i18n-shared';
+
+interface Props {
+  videos: Video[];
+  locale: string;
+  translations: TranslationDict;
+}
+
+const { videos, translations } = Astro.props;
+---
+
+<section aria-label={t(translations, 'videos.gridLabel', 'Video grid')} class="container mx-auto px-4 py-16 md:py-24">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+    {videos.map((video, index) => (
+      <article class="video-card flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+        <div class="video-placeholder relative aspect-video w-full bg-muted">
+          <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+            <span class="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-primary">{video.category}</span>
+            <h3 class="mt-3 font-display text-lg text-foreground">{video.title}</h3>
+          </div>
+          <button type="button" data-video-index={index} data-embed-url={video.embedUrl} class="absolute inset-0 inline-flex items-center justify-center rounded-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring" aria-label={t(translations, 'videos.play', 'Play video {title}').replace('{title}', video.title)}>
+            <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform hover:scale-105">
+              <svg aria-hidden="true" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z" /></svg>
+            </span>
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <p class="text-sm text-muted-foreground">{video.description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+<script>
+  function load(button: HTMLButtonElement) {
+    const card = button.closest('.video-card');
+    if (!card) return;
+    const placeholder = card.querySelector('.video-placeholder');
+    if (!placeholder) return;
+    const src = button.dataset.embedUrl;
+    if (!src) return;
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = card.querySelector('h3')?.textContent || '';
+    iframe.setAttribute('loading', 'lazy');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.className = 'aspect-video w-full rounded-t-2xl';
+    placeholder.replaceWith(iframe);
+  }
+  document.addEventListener('click', (e) => { const b = (e.target as HTMLElement).closest('[data-video-index]') as HTMLButtonElement | null; if (b) load(b); });
+  document.addEventListener('keydown', (e) => { if (e.key !== 'Enter' && e.key !== ' ') return; const b = (e.target as HTMLElement).closest('[data-video-index]') as HTMLButtonElement | null; if (!b) return; e.preventDefault(); load(b); });
+</script>

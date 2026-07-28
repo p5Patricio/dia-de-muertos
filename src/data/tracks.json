@@ -1,0 +1,26 @@
+[
+  {
+    "id": "cucaracha",
+    "title": "La Cucaracha",
+    "artist": "Traditional",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/La_Cucaracha.ogg"
+  },
+  {
+    "id": "cielito-lindo",
+    "title": "Cielito Lindo",
+    "artist": "Traditional",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/La_Cucaracha.ogg"
+  },
+  {
+    "id": "las-mananitas",
+    "title": "Las Mañanitas",
+    "artist": "Traditional",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/La_Cucaracha.ogg"
+  },
+  {
+    "id": "llorona",
+    "title": "La Llorona",
+    "artist": "Traditional",
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/La_Cucaracha.ogg"
+  }
+]

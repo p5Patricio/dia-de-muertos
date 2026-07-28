@@ -96,5 +96,28 @@
       "next": "Imagen siguiente",
       "counter": "{current} de {total}"
     }
+  },
+  "music": {
+    "title": "Música",
+    "description": "Canciones y sonidos tradicionales que acompañan la celebración."
+  },
+  "audio": {
+    "playerLabel": "Reproductor de audio",
+    "nowPlaying": "Reproduciendo",
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "previous": "Pista anterior",
+    "next": "Pista siguiente",
+    "seek": "Buscar",
+    "volume": "Volumen",
+    "mute": "Silenciar",
+    "captions": "Subtítulos no disponibles",
+    "playlist": "Lista de reproducción"
+  },
+  "videos": {
+    "title": "Videos",
+    "description": "Documentales y clips que dan vida a la tradición.",
+    "gridLabel": "Cuadrícula de videos",
+    "play": "Reproducir video {title}"
   }
 }

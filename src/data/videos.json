@@ -1,0 +1,30 @@
+[
+  {
+    "id": "documentary",
+    "title": "Día de Muertos Documentary",
+    "description": "An introduction to the history and meaning of the Day of the Dead.",
+    "category": "documentary",
+    "embedUrl": "https://www.youtube.com/embed/dia-de-muertos-placeholder-1"
+  },
+  {
+    "id": "ofrendas",
+    "title": "Building an Ofrenda",
+    "description": "Step-by-step look at how families create offerings for their loved ones.",
+    "category": "tutorial",
+    "embedUrl": "https://www.youtube.com/embed/dia-de-muertos-placeholder-2"
+  },
+  {
+    "id": "cempasuchil",
+    "title": "The Marigold Path",
+    "description": "How cempasúchil flowers guide spirits back to the living world.",
+    "category": "documentary",
+    "embedUrl": "https://www.youtube.com/embed/dia-de-muertos-placeholder-3"
+  },
+  {
+    "id": "pan-de-muerto",
+    "title": "Making Pan de Muerto",
+    "description": "A family recipe for the traditional bread of the dead.",
+    "category": "recipe",
+    "embedUrl": "https://www.youtube.com/embed/dia-de-muertos-placeholder-4"
+  }
+]
