@@ -1,0 +1,80 @@
+---
+import { changeLanguage } from 'i18next';
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card';
+import { defaultLocale, isLocale, loadTranslations, type Locale } from '@lib/i18n';
+import { t } from '@lib/i18n-shared';
+import { ChefHat, UtensilsCrossed } from 'lucide-react';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const locale: Locale = isLocale(lang) ? lang : defaultLocale;
+changeLanguage(locale);
+
+const entries = await getCollection('recetas', (entry) => entry.data.lang === locale);
+const entry = entries[0];
+if (!entry) throw new Error(`No recetas content found for locale ${locale}`);
+const { Content } = await entry.render();
+const translations = await loadTranslations(locale);
+
+const iconMap: Record<string, typeof ChefHat> = {
+  'pan-de-muerto': ChefHat,
+  tamales: UtensilsCrossed,
+};
+---
+
+<Layout locale={locale} title={entry.data.title} description={entry.data.description}>
+  <article class="container mx-auto px-4 py-16 md:py-24">
+    <header class="mx-auto max-w-3xl text-center">
+      <h1 class="font-display text-4xl text-foreground md:text-5xl">{entry.data.title}</h1>
+      <p class="mt-4 text-lg text-muted-foreground">{entry.data.description}</p>
+    </header>
+    <div class="content-body mx-auto mt-8 max-w-3xl"><Content /></div>
+    <section aria-label={entry.data.title} class="mx-auto mt-16 max-w-4xl">
+      <div class="grid gap-8">
+        {
+          entry.data.recipes.map((recipe) => {
+            const Icon = iconMap[recipe.id] ?? ChefHat;
+            return (
+              <Card className="border-border/60 bg-card">
+                <CardHeader>
+                  <div class="mb-3 inline-flex h-16 w-16 items-center justify-center rounded-lg bg-cempasuchil-500/10 text-cempasuchil-500">
+                    <Icon className="h-8 w-8" aria-hidden="true" />
+                  </div>
+                  <CardTitle>{recipe.name}</CardTitle>
+                  <CardDescription>{recipe.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div class="grid gap-6 md:grid-cols-2">
+                    <div>
+                      <h3 class="mb-2 text-sm font-semibold uppercase tracking-wide text-foreground">{t(translations, 'recipes.ingredients', 'Ingredients')}</h3>
+                      <ul class="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+                        {recipe.ingredients.map((ingredient) => (
+                          <li>
+                            {ingredient.name}
+                            {ingredient.amount && <span class="text-muted-foreground/70"> — {ingredient.amount}</span>}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 class="mb-2 text-sm font-semibold uppercase tracking-wide text-foreground">{t(translations, 'recipes.preparation', 'Preparation')}</h3>
+                      <ol class="list-decimal space-y-1 pl-5 text-sm text-muted-foreground">{recipe.steps.map((step) => <li>{step}</li>)}</ol>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })
+        }
+      </div>
+    </section>
+  </article>
+</Layout>

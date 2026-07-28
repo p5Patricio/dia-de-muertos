@@ -72,5 +72,19 @@
         "description": "Seasonal flavors: pan de muerto, tamales, and more."
       }
     }
+  },
+  "history": {
+    "title": "History",
+    "description": "Origins, evolution, and meaning of this ancient festivity."
+  },
+  "elements": {
+    "title": "Elements",
+    "description": "Learn about the altar, the offering, sugar skulls, and cempasúchil."
+  },
+  "recipes": {
+    "title": "Recipes",
+    "description": "Seasonal flavors: pan de muerto, tamales, and more.",
+    "ingredients": "Ingredients",
+    "preparation": "Preparation"
   }
 }

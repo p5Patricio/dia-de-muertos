@@ -72,5 +72,19 @@
         "description": "Sabores de la temporada: pan de muerto, tamales y más."
       }
     }
+  },
+  "history": {
+    "title": "Historia",
+    "description": "Orígenes, evolución y significado de esta ancestral festividad."
+  },
+  "elements": {
+    "title": "Elementos",
+    "description": "Conoce el altar, la ofrenda, las calaveras y el cempasúchil."
+  },
+  "recipes": {
+    "title": "Recetas",
+    "description": "Sabores de la temporada: pan de muerto, tamales y más.",
+    "ingredients": "Ingredientes",
+    "preparation": "Preparación"
   }
 }
